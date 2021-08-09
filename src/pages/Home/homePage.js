@@ -60,10 +60,10 @@ function Home() {
           )
         }
 
-const { posts } = data.getPosts;
+const { posts } = data?.getPosts;
   const main =  posts && (
   <div className="homeContainer">
-          { posts.map( (post, i) => (
+          { posts?.map( (post, i) => (
             <div className="card"  key={post.id} >
                   { <PostCard  post={post} index={i}/>}
             </div>

@@ -16,7 +16,7 @@ const Postcard = ({post}) => {
 
       const slicedTitle = post?.title?.slice(0,50);
       const toProfile = () =>{
-          history.push(`/${author.username}`)
+          history.push(`/${author?.username}`)
       }
 
 /* -------------------------------------------------------------------------- */
@@ -33,7 +33,7 @@ const Postcard = ({post}) => {
     <div className="postCard">
         <div className="buyer_avator"  onClick={toProfile} >
           <Avatar name={author.username} src={author?.image} />
-          <p> {author.username}</p>
+          <p> {author?.username}</p>
           <p style={{marginLeft:"2rem"}} > {timeAgo(createdAt)}</p>
         </div>
         <div>
@@ -79,7 +79,7 @@ const Postcard = ({post}) => {
               <WhatsApp/>
               <p>Whatsapp</p>
             </a>
-            <a href={`tel:${author.phonenumber}`} className="buy_button">
+            <a href={`tel:${author?.phonenumber}`} className="buy_button">
                 <Call/>
                 <p>Call me</p>
             </a>
