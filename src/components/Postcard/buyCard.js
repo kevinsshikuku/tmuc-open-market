@@ -15,9 +15,9 @@ const BuyCard = ({buy}) => {
        const {id, author, pricerange, title,  description, features, createdAt} =  buy;
        const featuresList = features?.split("#")
        const slicedTitle = title.slice(0,50);
-       const internationalPhone = author.phonenumber && `+254${author.phonenumber.substring(1)}`;
+       const internationalPhone = author?.phonenumber && `+254${author?.phonenumber.substring(1)}`;
        const toProfile = () =>{
-          history.push(`/${author.username}`)
+          history.push(`/${author?.username}`)
       }
 
 /* -------------------------------------------------------------------------- */
@@ -29,7 +29,7 @@ const BuyCard = ({buy}) => {
   <>
     <div className="postCard">
         <div className="buyer_avator"  onClick={toProfile} >
-          <Avatar name={author.username} src={author.image} />
+          <Avatar name={author?.username} src={author?.image} />
           <p> {timeAgo(createdAt)}</p>
         </div>
         <div className="cardMedia" onClick={toBuy}>
@@ -50,7 +50,7 @@ const BuyCard = ({buy}) => {
               <WhatsApp/>
               <p>Whatsapp</p>
             </a>
-            <a href={`tel:${author.phonenumber}`} className="buy_button">
+            <a href={`tel:${author?.phonenumber}`} className="buy_button">
                 <Call/>
                 <p>Call me</p>
             </a>
