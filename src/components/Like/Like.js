@@ -24,8 +24,8 @@ const LikeButton = ( { postId, likes} ) => {
           history.push(`/signup`)
       }
 
-      const hasLiked = likes.find(
-        l => l.user.username === auth.user.username && l.post.id === postId
+      const hasLiked = likes?.find(
+        l => l?.user?.username === auth?.user?.username && l?.post?.id === postId
       );
 
 
@@ -34,7 +34,7 @@ const LikeButton = ( { postId, likes} ) => {
   const options = {
     create: {
       mutation: CREATE_LIKE,
-      variables: { postId, userId: auth.user.id },
+      variables: { postId, userId: auth?.user?.id },
     },
     delete: {
       mutation: DELETE_LIKE,
@@ -55,7 +55,7 @@ const [createLike, {data, loading}] = useMutation(options[operation].mutation,{
         variables:{id:postId},
         data:{
           getPost:{
-              likes:[...existingPost?.getPost.likes, newLike]
+              likes:[...existingPost?.getPost?.likes, newLike]
           }
         }
       })

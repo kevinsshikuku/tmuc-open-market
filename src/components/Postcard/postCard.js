@@ -32,7 +32,7 @@ const Postcard = ({post}) => {
 
     <div className="postCard">
         <div className="buyer_avator"  onClick={toProfile} >
-          <Avatar name={author?.username} src={author?.image} />
+          <Avatar name={author.username} src={author?.image} />
           <p> {author?.username}</p>
           <p style={{marginLeft:"2rem"}} > {timeAgo(createdAt)}</p>
         </div>
