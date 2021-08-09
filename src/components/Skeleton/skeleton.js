@@ -17,7 +17,7 @@ export const Skeleton = () => {
                </div>
            </div>
 
-          <div className="skeleton-media">Tmuc open market</div>
+          <div className="skeleton-media">tmuc open market</div>
 
            <div className="skeleton-action">
                 <p className="skeleton-button"/>
