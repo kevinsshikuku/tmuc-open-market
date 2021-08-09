@@ -24,7 +24,7 @@ const  Buygrid = ({buy})  => {
            <div className="action_btns">
               {pricerange && <p>{`Ksh ${pricerange}`}</p>}
               <p>{weekday}</p>
-              {(auth.user.username ===  author.username) && <DeleteButton buyId={id}/>}
+              {(auth?.user?.username ===  author?.username) && <DeleteButton buyId={id}/>}
            </div>
 
 
@@ -33,7 +33,7 @@ const  Buygrid = ({buy})  => {
          <div className="grid_post_price" >
           <b>Desired feature:</b>
           <ul>
-            {featuresList.map((f, i) => (
+            {featuresList?.map((f, i) => (
               <li key={i}>{f}</li>
             ))}
           </ul>

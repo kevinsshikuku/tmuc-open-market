@@ -64,8 +64,8 @@ const  Postgrid = ({post, likedItem})  => {
         <div className="prices">
         <p><b>{`Ksh ${price}`}</b></p>
         {crossedPrice && <p className="crossed_price" >{`Ksh ${crossedPrice}`}</p>}
-        {(auth.user.username ===  author?.username) && <DeleteButton id={id}/>}
-        {(auth.user.username ===  author?.username) &&
+        {(auth?.user?.username ===  author?.username) && <DeleteButton id={id}/>}
+        {(auth?.user?.username ===  author?.username) &&
         <p onClick={edit} className={classes.edit} >Edit</p>}
 
         </div> <br/>

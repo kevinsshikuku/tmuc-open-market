@@ -30,11 +30,11 @@ export const CreateComment = ({postId}) => {
 
 /* -------------------------------------------------------------------------- */
   const [{auth}] = useStore()
-  const user = auth.user
+  const user = auth?.user
   const variables = {
       postId,
       comment,
-      author: user.id
+      author: user?.id
   };
 
   const [submitCommnet,{ loading, data}] = useMutation(CREATE_COMMENT,{
