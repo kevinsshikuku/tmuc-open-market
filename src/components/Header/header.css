@@ -1,0 +1,277 @@
+.loggedInHeader, .loggedOutHeader, .othertHeader{
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 13;
+  background-color: #deb887;
+  width: 100vw;
+  height: 3rem;
+  transform: all .3s;
+}
+
+.loggedInHeader ul, .loggedOutHeader ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.loggedInHeader ul li{
+  display: block;
+  margin: 1rem 0 0 0;
+  cursor: pointer;
+}
+
+
+/* -------------------------------out------------------------------------------- */
+.loggedOutHeader ul li {
+     float: left;
+     display: block;
+     padding: 1rem 0 0 0;
+     margin-left: 2rem;
+     cursor: pointer;
+     font-family: sans-serif;
+  }
+.loggedInHeader ul li:hover, .loggedOutHeader ul li:hover{
+  color:blue;
+}
+
+.logo, .Applogo{
+  float: left;
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  font-weight: bolder;
+  margin-top: .5rem;
+  margin-left: 1rem;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+.logo:hover{
+  color: white;
+}
+
+.loggedInHeader .menu {
+  background:linear-gradient(#deb887, rgb(240, 142, 142));
+  color: rgb(0, 0, 0);
+  box-shadow: 2px 2px 4px #000000;
+  font-weight: bolder;
+  font-size: larger;
+  padding-top: 2rem;
+  position: absolute;
+  right: 0;
+  clear: both;
+  width: 0;
+  height: 100vh;
+  transition: width .2s ease-out;
+}
+
+/* -------------------------------------out-menu------------------------------------ */
+.loggedOutHeader .menu{
+  color: rgb(31, 25, 25);
+  float: right;
+  width: fit-content;
+  margin-right: 8vw;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.loggedInHeader .menu_icon{
+padding: 20px 28px;
+position: relative;
+float: right;
+cursor: pointer;
+font-size: large;
+}
+li p{
+  position: absolute;
+  display: inline-block;
+  margin: 2.5px 0 0 5px;
+}
+.loggedInHeader .nav_icon{
+display: block;
+background-color: black;
+width: 20px;
+height: 3px;
+position: relative;
+z-index: 10;
+transition: background-color .2s ease-in-out;
+}
+
+.loggedInHeader .nav_icon::before{
+display: block;
+background: black;
+content: "";
+height: 100%;
+width: 100%;
+position: absolute;
+transition: all .2s ease-out;
+top:6px;
+}
+
+.loggedInHeader .nav_icon::after{
+display: block;
+background: black;
+content: "";
+height: 100%;
+width: 100%;
+position: absolute;
+transition: all .2s ease-in-out;
+top:-6px;
+}
+
+.loggedInHeader .menu_btn, .loggedOutHeader .menu_btn{
+  display: none;
+}
+
+.loggedInHeader .menu_btn:checked ~ .menu{
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+
+}
+
+.loggedInHeader .menu_btn:checked ~ .menu li{
+  margin: 2rem 0  0  30%;
+  font-family: sans-serif;
+}
+
+
+.loggedInHeader .menu_btn:checked ~ .menu_icon .nav_icon{
+  background: transparent;
+}
+
+.loggedInHeader .menu_btn:checked ~ .menu_icon .nav_icon:before{
+  transform: rotate(-45deg);
+  background: rgb(252, 252, 252);
+  width: 120%;
+  top: 0;
+}
+
+.loggedInHeader .menu_btn:checked ~ .menu_icon .nav_icon:after{
+    transform: rotate(45deg);
+    background: rgb(252, 252, 252);
+    width: 120%;
+   top:0;
+}
+
+/* ----------------------Tabs---------------------------------------------------- */
+.loggedInTabs, .loggedOutTab{
+  position: absolute;
+  display: flex;
+  align-content: space-around;
+}
+.loggedInTabs p, .loggedOutTab p{
+ margin: 0 1vw;
+ font-size: x-small;
+}
+
+/* ------------------------ Other Header-------------------------------------------------- */
+.otherHearderTab{
+  display: flex;
+  padding: 1rem 0 0 1rem;
+}
+.othertHeader .back_arrow{
+  flex: .2;
+}
+
+.othertHeader .other_header_tag{
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.emptyDiv{
+  width: 100%;
+  height: 4rem;
+  margin-top: 3rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+@media (min-width:48em){
+
+.loggedInHeader{
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  background-color:white;
+  width: 100vw;
+  height: 4rem;
+  transform: all .3s;
+}
+
+.othertHeader{
+ width: 100vw;
+ padding-left: 10rem;
+ background-color:white;
+}
+
+  .loggedInHeader ul li {
+     /* float: left; */
+     margin-top: 0;
+     padding: .5rem 1rem;
+  }
+
+  .loggedInHeader .menu{
+    background:none;
+    font-stretch: extra-condensed;
+    margin: 4rem 25vw 0 0;
+    width: 15rem;
+    font-size: xx-large;
+    padding: 0 0 0 4rem;
+    box-shadow: none;
+    border-left: 1px solid gray;
+}
+  .loggedInHeader .menu_icon{
+    display: none;
+  }
+
+.loggedInTabs{
+margin-left: 5rem;
+}
+.Applogo{
+  justify-content: center;
+  font-size: xx-large;
+  margin-top: .5rem;
+  margin-left: .7rem;
+  text-shadow: 1px 1px 4px burlywood;
+}
+
+ .loggedInHeader ul li{
+   margin-top: 1rem;
+   font-family: sans-serif;
+ }
+
+.logo:hover, .loggedInHeader ul li:hover{
+  color: #030bff;
+}
+
+
+.emptyDiv{
+display: none;
+}
+
+}

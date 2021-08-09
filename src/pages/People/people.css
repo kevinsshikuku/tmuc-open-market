@@ -1,0 +1,29 @@
+
+main{
+ margin-top: 3.3rem;
+}
+.person_wrapper{
+ background-color: #8080803d;
+ margin: .5rem .2rem;
+ border-radius: 10px;
+}
+.person_header{
+ display: flex;
+ padding: .5rem 2rem;
+}
+
+.person_contact{
+ margin-left: 1rem;
+ margin-top: auto;
+}
+
+.peron_more{
+ padding: .3rem 1rem;
+}
+
+.people_loader{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}

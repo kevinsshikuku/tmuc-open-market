@@ -1,0 +1,65 @@
+.media_wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  border-bottom: 3px solid rgba(68, 68, 68, 0.282);
+}
+
+.action_btns{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.prices{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  align-items: center;
+}
+.prices button{
+  margin-left: 1rem;
+}
+.grid_post_price, .grid_post_title{
+margin:.2rem 0  0 2rem;
+}
+
+
+ul{
+  margin-left: 3rem;
+}
+.crossed_price{
+  text-decoration:line-through;
+  color:gray;
+  margin-left:5px;
+  font-size: smaller;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+@media(min-width:48em){
+.media_wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 30rem;
+}
+
+  .media{
+    width: 30rem;
+  }
+}
+
+
+

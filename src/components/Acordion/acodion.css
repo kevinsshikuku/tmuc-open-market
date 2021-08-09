@@ -1,0 +1,32 @@
+.acordionDescription{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 1rem;
+ cursor: pointer;
+
+}
+
+
+.description{
+font-family: serif;
+ font-weight: bolder;
+}
+
+.overlay{
+ position: absolute;
+ z-index: 13;
+ max-height: 50vh;
+ width: 100vw;
+ border-radius: 5px;
+ background-color: rgb(94, 255, 0);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.close_btn{
+ position: absolute;
+ bottom: 0;
+ right: 0;
+}

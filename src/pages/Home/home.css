@@ -1,0 +1,65 @@
+.homeContainer{
+ margin-top: 2rem;
+ display: flex;
+ flex-direction: column;
+}
+
+.createItemForm{
+ display: none;
+}
+
+
+
+.snack_bar{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 13;
+  margin: auto;
+  margin-top: 3.8rem;
+  width:fit-content !important;
+  height: 1rem !important;
+}
+
+
+
+.notFound{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+@media(min-width:48em){
+.homeContainer{
+ position: absolute;
+ left: 0;
+ margin: 4rem 0 0 20vw;
+ padding: 0 5px 0 10px;
+}
+
+.createItemForm{
+  display: flex;
+  padding: 0 0 0 1rem;
+  justify-content: center;
+  z-index: 12;
+  position: fixed;
+  /* background-color: red; */
+  top: 0;
+  right: 0;
+  margin-right: 1rem;
+  margin-left: auto;
+  margin-top: 4rem;
+}
+
+}

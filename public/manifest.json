@@ -1,0 +1,30 @@
+{
+  "short_name": "TMUC open market",
+  "name": "TMUC OPEN MARKET",
+  "icons": [
+    {
+      "src": "logo96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "logo144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2ceaff",
+  "background_color": "#2ceaff"
+}
