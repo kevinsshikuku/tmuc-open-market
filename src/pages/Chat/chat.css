@@ -12,8 +12,7 @@
 
 .chat_wrapper{
   padding-top: 4rem;
-  min-height: 1.5vh;
-  border: 1px solid black;
+  min-height: 105vh;
 }
 
 .text{
