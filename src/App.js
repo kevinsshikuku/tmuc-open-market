@@ -5,6 +5,7 @@ import './App.css';
 import ReactGA from 'react-ga';
 import {PostNoficiactionProvider} from './Utils/PostNotificationContext';
 import { NotFound, HomePage } from './pages/Home';
+import FabComponent from "./components/Fab";
 
 
 ReactGA.initialize('UA-192087437-1');
@@ -29,6 +30,7 @@ const AppInfo = React.lazy( () => import( "./pages/windoshoppe/appInfo"));
 const People = React.lazy( () => import("./pages/People/People"));
 const PostNotification = React.lazy(()=> import('./pages/Notification/index'));
 const EditPost = React.lazy(() => import('./pages/Profile/editPost'));
+const Chat = React.lazy(() => import("./pages/Chat"));
 
 
 function App() {
@@ -62,6 +64,7 @@ useEffect( () => {
      <PostNoficiactionProvider>
          <CloudinaryContext cloudName="dsvun26ld" dpr="w-auto">
             <div className="App">
+               <FabComponent/>
                <React.Suspense fallback={ <div>{fall_back}</div>}>
                      <Switch>
                         <Route exact path='/' component={HomePage}/>
@@ -75,6 +78,8 @@ useEffect( () => {
                         <Route exact path='/buyers' component={Buyers}/>
                         <Route exact path='/people' component={People}/>
                         <Route exact path='/notification' component={PostNotification}/>
+
+                        <Route exact path="/chat" component={Chat}/>
 
                         <Route exact path="/profile/:username/items" component={UserItems}/>
                         <Route exact path="/profile/:username/buys" component={UserBuys}/>

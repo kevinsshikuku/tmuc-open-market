@@ -17,22 +17,6 @@ export const buyAuthorPayload = `
       id
       user
     }
-    notifications {
-      id
-      author {
-        id
-        username
-      }
-      follow {
-        id
-      }
-      like {
-        id
-      }
-      comment {
-        id
-      }
-    }
   }
 `;
 

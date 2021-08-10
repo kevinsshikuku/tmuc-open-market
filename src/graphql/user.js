@@ -65,22 +65,6 @@ export const GET_USER = gql`
         id
         user
       }
-      notifications {
-        id
-        author {
-          id
-          username
-        }
-        follow {
-          id
-        }
-        like {
-          id
-        }
-        comment {
-          id
-        }
-      }
     }
   }
 `;
@@ -167,22 +151,6 @@ export const GET_AUTH_USER = gql`
         id
         user
       }
-      notifications {
-        id
-        author {
-          id
-          username
-        }
-        follow {
-          id
-        }
-        like {
-          id
-        }
-        comment {
-          id
-        }
-      }
     }
   }
 `;
@@ -210,16 +178,6 @@ export const GET_USERS = gql`
         followers {
           id
           user
-        }
-        notifications {
-          id
-          author {
-            id
-            username
-          }
-          follow {
-            id
-          }
         }
       }
     }

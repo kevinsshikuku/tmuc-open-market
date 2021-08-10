@@ -21,6 +21,10 @@ const route = {
       GAEventTracker("Page navigation", e.target.baseURI)
       return history.push('./buy')
    },
+    chat: (e) => {
+      GAEventTracker("Page navigation", e.target.baseURI)
+      return history.push('./chat')
+   },
     buyers: (e) => {
       GAEventTracker("Page navigation", e.target.baseURI)
       return history.push('./buyers')

@@ -1,27 +1,20 @@
 import gql from 'graphql-tag';
 
 /**
- * Gets user's specific conversation
+ * Gets user's public chat conversations conversation
  */
 export const GET_MESSAGES = gql`
-  query($authUserId: ID!, $userId: ID!) {
-    getMessages(authUserId: $authUserId, userId: $userId) {
+  query{
+    getMessages{
       id
-      receiver {
-        id
-        username
-        fullName
-        image
-        createdAt
-      }
       sender {
         id
         username
-        fullName
+        fullname
         image
         createdAt
       }
-      message
+      body
       createdAt
     }
   }
@@ -32,15 +25,8 @@ export const GET_MESSAGES = gql`
  */
 export const GET_MESSAGES_SUBSCRIPTION = gql`
   subscription($authUserId: ID!, $userId: ID!) {
-    messageCreated(authUserId: $authUserId, userId: $userId) {
+    messageCreated {
       id
-      receiver {
-        id
-        username
-        fullName
-        image
-        createdAt
-      }
       sender {
         id
         username
@@ -48,48 +34,30 @@ export const GET_MESSAGES_SUBSCRIPTION = gql`
         image
         createdAt
       }
-      message
+      body
       createdAt
     }
   }
 `;
 
 /**
- * Creates a message
+ * sends message to public chat
  */
 export const CREATE_MESSAGE = gql`
-  mutation($input: CreateMessageInput!) {
-    createMessage(input: $input) {
+  mutation($body: String!) {
+    createMessage(body: $body) {
       id
-      isFirstMessage
+      sender {
+        id
+        username
+        fullname
+        image
+        createdAt
+      }
+      body
+      createdAt
     }
   }
 `;
 
-/**
- * Get user's new conversation in real time
- */
-export const GET_NEW_CONVERSATIONS_SUBSCRIPTION = gql`
-  subscription {
-    newConversation {
-      id
-      username
-      fullName
-      image
-      isOnline
-      seen
-      lastMessage
-      lastMessageSender
-      lastMessageCreatedAt
-    }
-  }
-`;
 
-/**
- * Updates message seen property
- */
-export const UPDATE_MESSAGE_SEEN = gql`
-  mutation($input: UpdateMessageSeenInput!) {
-    updateMessageSeen(input: $input)
-  }
-`;

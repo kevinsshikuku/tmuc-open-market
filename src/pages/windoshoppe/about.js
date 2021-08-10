@@ -18,7 +18,7 @@ const AboutUs = () => {
 UsedocumentTitle("AboutUs")
   return(
       <>
-      <RouteHeader tag={"tmuc open market"}/>
+      <RouteHeader tag={"Tmuc open market"}/>
         <Info/>
       <Footer/>
       </>

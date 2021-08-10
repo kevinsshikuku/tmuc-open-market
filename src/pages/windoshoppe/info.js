@@ -30,7 +30,7 @@ return(
           <div className='info_app-about'>
             <People/>
             <div>
-                <h4>Contact windoshoppe incase of;</h4>
+                <h4>Contact us incase of;</h4>
                 <p>Questions? Need help?</p>
                 <p>Want to advertise?</p>
             </div>

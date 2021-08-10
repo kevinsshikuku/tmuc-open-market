@@ -1,14 +1,13 @@
 import React from 'react';
 import   "./header.css";
-import {InfoOutlined,Share, People, SearchTwoTone, Settings, ShoppingCart,ShoppingBasket, PersonOutlined} from '@material-ui/icons';
+import {InfoOutlined,Share, People, SearchTwoTone, Settings, ShoppingCart,ShoppingBasket, Chat, PersonOutlined} from '@material-ui/icons';
 import Routes from "../../store/routes";
 import {useHistory} from "react-router-dom";
 
 
-
 /** Side bar component */
 export function SideBar() {
- const {sell, search, AboutUs, toAppInfo,settings,toProfile, buy, toPeople} = Routes()
+ const {sell, search, AboutUs, toAppInfo,settings,toProfile, buy, chat, toPeople} = Routes()
  return (
   <div>
     <input className="menu_btn" type="checkbox" id="loggedIn_menu_btn"/>
@@ -19,6 +18,7 @@ export function SideBar() {
         <ul className="menu">
               <li onClick={sell}> <ShoppingBasket/> <p>Sell</p></li>
               <li onClick={buy}> <ShoppingCart/> <p>Buy</p> </li>
+              <li onClick={chat}> <Chat/> <p>Chat</p> </li>    
               <li onClick={toPeople}> <People/> <p>People</p> </li>
               <li onClick={search} > <SearchTwoTone/> <p>Search</p></li>
 
