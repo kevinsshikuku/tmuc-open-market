@@ -88,7 +88,7 @@ return(
             <QuestionAnswerOutlined/>
             <div>
                 <h4>More info</h4>
-                <p>More information about windoshoppe.</p>
+                <p>More information about the open market.</p>
             </div>
           </div>
       </div>
