@@ -60,7 +60,7 @@ return(
           <InfoOutlined/>
            <div>
               <h4>App info</h4>
-              <p>Get to know about windoshoppe</p>
+              <p>Get to know about tmuc open market</p>
            </div>
         </div>
            <div>
