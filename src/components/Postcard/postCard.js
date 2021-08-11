@@ -15,6 +15,8 @@ const Postcard = ({post}) => {
       const {id , author, image, inStock, price,crossedPrice, title, createdAt} =  post ;
 
       const slicedTitle = post?.title?.slice(0,50);
+      const internationalPhone = author?.phonenumber?.slice(1);
+
       const toProfile = () =>{
           history.push(`/${author?.username}`)
       }
@@ -75,7 +77,7 @@ const Postcard = ({post}) => {
         }
 
         <div className="buy_itemBtns">
-            <a className="buy_button" href={`https://api.whatsapp.com/send?phone=${"internationalPhone"}`}>
+            <a className="buy_button" href={`https://api.whatsapp.com/send?phone=${`+254${internationalPhone}`}`}>
               <WhatsApp/>
               <p>Whatsapp</p>
             </a>
