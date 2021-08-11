@@ -6,6 +6,8 @@ import ReactGA from 'react-ga';
 import {PostNoficiactionProvider} from './Utils/PostNotificationContext';
 import { NotFound, HomePage } from './pages/Home';
 import FabComponent from "./components/Fab";
+import Chat from "./pages/Chat";
+import Buyers from "./pages/Buyers/Buyers";
 
 
 ReactGA.initialize('UA-192087437-1');
@@ -16,7 +18,7 @@ const SignUp  = React.lazy( () => import("./pages/Auth/SignUp"));
 const AboutUs = React.lazy( () => import("./pages/windoshoppe/about"));
 const Sell = React.lazy( () => import("./pages/Sell/sell"));
 const Buy = React.lazy( () => import("./pages/Buy/Buy"));
-const Buyers = React.lazy( () => import("./pages/Buyers/Buyers"));
+// const Buyers = React.lazy( () => import("./pages/Buyers/Buyers"));
 const Search = React.lazy( () => import("./pages/Search/index"));
 const Profile = React.lazy( () => import("./pages/UserInfor/profile"));
 const UserItems = React.lazy( () => import( "./pages/UserInfor/items"));
@@ -30,7 +32,7 @@ const AppInfo = React.lazy( () => import( "./pages/windoshoppe/appInfo"));
 const People = React.lazy( () => import("./pages/People/People"));
 const PostNotification = React.lazy(()=> import('./pages/Notification/index'));
 const EditPost = React.lazy(() => import('./pages/Profile/editPost'));
-const Chat = React.lazy(() => import("./pages/Chat"));
+// const Chat = React.lazy(() => import("./pages/Chat"));
 
 
 function App() {

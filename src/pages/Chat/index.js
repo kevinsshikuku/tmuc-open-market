@@ -20,7 +20,7 @@ function Index() {
    return(
      <>
       <Header/>
-      <h1>Loading</h1>
+      <div className="Cloading"><h1>Open chat room</h1></div>
      </>
    )}
 

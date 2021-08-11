@@ -15,6 +15,15 @@
   min-height: 105vh;
 }
 
+.Cloading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: gray;
+}
+
 .text{
   margin-right: 0;
   margin: 0 2rem;
