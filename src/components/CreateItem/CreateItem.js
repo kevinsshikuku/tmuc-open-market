@@ -40,7 +40,7 @@ export const  CreateItem = () => {
   };
 
 
-
+console.log(image)
 /** handles post image upload ! */
  const handlePostImageUpload = e => {
         const file = e.target.files[0];
@@ -52,34 +52,13 @@ export const  CreateItem = () => {
       previewFile(file)
   };
 
-const previewFile = (file) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onloadend = (e) => {
-        //create canvas element
-         const canvas = document.createElement('canvas');
-
-      //find max width
-      const MAX_WIDTH = 100;
-
-      //aspect ratio && set canvas with equal to max with
-      const scaleSize = MAX_WIDTH / e.target.width;
-      canvas.width = MAX_WIDTH;
-      canvas.height = e.target.height * scaleSize;
-
-      //create canvas context
-      const ctx = canvas.getContext("2d");
-
-      //draw image into the canvas
-      ctx.drawImage(e.target, 0,0, canvas.width, canvas.height);
-      const srcEncoded = ctx.canvas.toDataURL(e.target, "image/jpeg");
-
-
-      // set the state with dataUrl image.
-      setImage(srcEncoded);
-      }
-}
-
+  const previewFile = async (file) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onloadend = () => {
+        setImage(reader.result);
+        }
+  }
 
 
 
