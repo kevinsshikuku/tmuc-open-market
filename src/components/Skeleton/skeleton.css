@@ -1,15 +1,19 @@
 @keyframes loading {
   0%,25% {
-    background-color: #eee5e5d4;
+    background-color: #ebebebf5;
   }
-  50%,75%{
-    background-color: #dcd2d2c4;
+  50% {
+    background-color: #a9a9a9;
+  }
+  75%{
+    background-color: #bbbbbbc4;
   }
 
   100% {
-   background-color: #e2d8d8a1;
+   background-color: #a9a9a9;
   }
 }
+
 
 
 
