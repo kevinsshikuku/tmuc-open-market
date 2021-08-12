@@ -39,8 +39,6 @@ export const  CreateItem = () => {
     setFeatures('')
   };
 
-
-console.log(image)
 /** handles post image upload ! */
  const handlePostImageUpload = e => {
         const file = e.target.files[0];
