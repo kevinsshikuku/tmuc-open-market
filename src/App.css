@@ -58,12 +58,27 @@ a{
   text-align: center;
 }
 
+@keyframes load {
+  0%,25% {
+    background-color: #ffffff;
+  }
+  75%,  50%{
+    background-color: rgb(235, 235, 235);
+  }
+
+  100% {
+   background-color: #ffffffee;
+  }
+}
+
 
 .fallback{
   display: flex;
   justify-content: center;
+  background-color: #ffffffb8;
   align-items: center;
   height: 100vh;
+  animation: load 1s infinite linear;
 }
 .fallback p{
   color:gray;
