@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 /**
- * Gets user's public chat conversations conversation
+ * Gets  public chat conversations conversation
  */
 export const GET_MESSAGES = gql`
   query{
@@ -14,11 +14,56 @@ export const GET_MESSAGES = gql`
         image
         createdAt
       }
+      replies{
+        id
+        author{
+          id
+          username
+          image
+        }
+        body
+        createdAt
+      }
       body
       createdAt
     }
   }
 `;
+
+/**
+ * Gets public chat message
+ */
+export const GET_MESSAGE = gql`
+  query($messageId: ID!){
+    getMessage(messageId: $messageId){
+      id
+      sender {
+        id
+        username
+        fullname
+        image
+        createdAt
+      }
+      replies{
+        id
+        author{
+          id
+          username
+          image
+        }
+        body
+        createdAt
+      }
+      body
+      createdAt
+    }
+  }
+`;
+
+
+
+
+
 
 /**
  * Gets user's specific conversation in real time
@@ -60,4 +105,24 @@ export const CREATE_MESSAGE = gql`
   }
 `;
 
-
+export const SEND_REPLY = gql`
+  mutation($body: String! $messageId: ID!) {
+    sendReply(body: $body messageId: $messageId) {
+      id
+      author {
+        id
+        username
+      }
+      message {
+        id
+        body
+        replies{
+          id
+          body
+        }
+      }
+      body
+      createdAt
+    }
+  }
+`;
