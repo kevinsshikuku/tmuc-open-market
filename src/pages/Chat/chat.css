@@ -30,11 +30,36 @@
   margin: 0 2rem;
 }
 
+.time{
+  width: fit-content;
+  margin: 0 0 0 auto;
+  color: rgb(151, 151, 191);
+}
+.replyArrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(103, 103, 247);
+}
+.replyArrow i{
+  color: #ffffff;
+  font-size: xx-small;
+  padding: 0 .5rem;
+}
+
+.reply{
+  padding: .5rem;
+  color: aquamarine;
+  margin: .2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(245, 222, 179, 0.337);
+}
+
 .message{
   width: fit-content;
   word-break: break-word;
   border-radius: 6px;
-  background-color: rgb(90, 90, 90);
+  background-color: rgba(0, 0, 0, 0.748);
   color: white;
   margin-top: 1rem;
   padding:1rem 2rem;
@@ -46,6 +71,7 @@
 .message .meta{
   display: flex;
   margin-top: .5rem;
+  align-items: baseline;
   justify-content: space-between;
 }
 
@@ -114,3 +140,4 @@ background-color: rgba(128, 0, 128, 0.713);
   justify-content: center;
   widows: 100%;
 }
+
