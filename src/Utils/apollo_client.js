@@ -4,7 +4,7 @@ import {
   ApolloLink,
   split,
 } from "@apollo/client";
-// import { persistCache } from 'apollo3-cache-persist';
+import { persistCache } from 'apollo3-cache-persist';
 import { setContext } from '@apollo/client/link/context';
 import { createUploadLink } from "apollo-upload-client";
 import { WebSocketLink } from "@apollo/client/link/ws";
@@ -97,12 +97,12 @@ export const createApolloClient = (API_URL, websocketApiUrl) => {
 );
 
 
-// const persist_cache = async () => {
-//       await persistCache({
-//       cache,
-//       storage: window.localStorage,
-//     });
-// }
+const persist_cache = async () => {
+      await persistCache({
+      cache,
+      storage: window.localStorage,
+    });
+}
 
 
 
@@ -141,7 +141,7 @@ const wsLink = new WebSocketLink({
     uploadLink
   );
 
-  // persist_cache();
+  persist_cache();
 /* -------------------------------------------------------------------------- */
   return new ApolloClient({
     link: ApolloLink.from([errorLink, authLink, retryLink, terminatingLink]),
