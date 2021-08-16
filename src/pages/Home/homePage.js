@@ -21,7 +21,8 @@ function Home() {
           limit: HOME_PAGE_POSTS_LIMIT,
         };
         const { data,loading} = useQuery(GET_POSTS,{
-          variables
+          variables,
+          fetchPolicy="cache-first",
           });
 
 
