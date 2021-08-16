@@ -27,7 +27,7 @@ function Buyers() {
 
         const { data,loading } = useQuery(GET_BUYS,{
           variables,
-          // fetchPolicy:"cache-and-network",
+          fetchPolicy="cache-first",
           });
         const skeleton = (
           <>
