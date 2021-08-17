@@ -1,8 +1,5 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import {useQuery}  from '@apollo/client';
-
-import {GET_POST } from '../../graphql/post';
 import RouteHeader from "../../components/Header/routeHeader";
 import LikeButton from "../../components/Like/Like";
 import { weekDay} from '../../Utils/date';
@@ -10,8 +7,9 @@ import Comments from "../../components/Comment/comments";
 import "./item.css"
 import {CreateComment} from "../../components/CreateCommnet/createComment";
 import {UsedocumentTitle} from "../../Hooks/UseDocumentTitle";
-import {SkeletonPost, CircularProg} from "../../components/Skeleton/skeleton";
+import {SkeletonPost} from "../../components/Skeleton/skeleton";
 import {Place, WhatsApp, Call} from "@material-ui/icons";
+import { usePostState } from '../../store/posts';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
@@ -19,37 +17,17 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 function Item({match}) {
  const history = useHistory();
  UsedocumentTitle("Item")
+ const  { posts } = usePostState();
 
- const { data,loading} = useQuery(GET_POST,{
-   variables:{
-     id: match.params.id
-   },
-   fetchPolicy:"cache-and-network"
- });
-
-
-
-  let loader;
-  if(loading){
-    return (
-    <>
-    <RouteHeader tag="product details"/>
-    <br/> <br/>
-    <div className="circula_progress" >
-       <CircularProg/>
-    </div>
-    </>
-    )
-  }
-
-
-
+const post = posts[0].find( post => { return post.id === match.params.id})
 
 const { id , image,likes,inStock, price,crossedPrice, title, author, description,
-        features,location, comments, createdAt} = data.getPost;
+        features,location, comments, createdAt} = post;
+
+
 
 const weekday = weekDay(createdAt);
-const slicedTitle = title.slice(0,100);
+const slicedTitle = title.slice(0,97);
 const internationalPhone = author.phonenumber && `+254${author.phonenumber.substring(1)}`;
 const toProfile = () =>{
     history.push(`/${author.username}`)
@@ -69,7 +47,7 @@ const toProfile = () =>{
                 loading="lazy"
                 src={image}/>
              }
-        </div> : <div>  <SkeletonPost title={slicedTitle}/> </div> }
+        </div> : <div>  <SkeletonPost title={`${slicedTitle}`}/> </div> }
          </div>
 
         <div className="itemStats">
@@ -150,7 +128,7 @@ const toProfile = () =>{
  return (
   <>
   <RouteHeader tag={"product details"}/>
-  {loading ? loader : main}
+  {main}
   </>
  )
 }
