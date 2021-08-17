@@ -5,6 +5,7 @@ import { BrowserRouter} from 'react-router-dom';
 import { ApolloProvider as ApolloHooksProvider } from '@apollo/react-hooks';
 import { createApolloClient } from './Utils/apollo_client';
 import { StoreProvider } from './store';
+import { PostProvider } from "./store/posts";
 import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
@@ -30,6 +31,7 @@ if(rootElement.hasChildNodes()){
   <React.StrictMode>
     <ApolloProvider client={apolloClient}>
       <ApolloHooksProvider client={apolloClient}>
+         <PostProvider>
           <StoreProvider>
             <BrowserRouter>
                 <AuthUserProvider>
@@ -39,6 +41,7 @@ if(rootElement.hasChildNodes()){
                 </AuthUserProvider>
             </BrowserRouter>
           </StoreProvider>
+        </PostProvider>
       </ApolloHooksProvider>
     </ApolloProvider>
   </React.StrictMode>,
@@ -49,6 +52,7 @@ if(rootElement.hasChildNodes()){
   <React.StrictMode>
     <ApolloProvider client={apolloClient}>
       <ApolloHooksProvider client={apolloClient}>
+        <PostProvider>
           <StoreProvider>
             <BrowserRouter>
                 <AuthUserProvider>
@@ -58,6 +62,7 @@ if(rootElement.hasChildNodes()){
                 </AuthUserProvider>
             </BrowserRouter>
           </StoreProvider>
+        </PostProvider>
       </ApolloHooksProvider>
     </ApolloProvider>
   </React.StrictMode>,
