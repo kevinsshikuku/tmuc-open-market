@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect} from 'react';
 import {useQuery}  from '@apollo/client';
 import {Skeleton} from "../../components/Skeleton/skeleton";
 import { useStore } from '../../store';
@@ -9,12 +9,14 @@ import { GET_POSTS} from "../../graphql/post";
 import { HOME_PAGE_POSTS_LIMIT } from '../../constants/DataLimit';
 import {UsedocumentTitle} from "../../Hooks/UseDocumentTitle";
 import {CreateItem} from "../../components/CreateItem/CreateItem";
+import { usePostDispatch } from '../../store/posts';
 import  "./home.css";
 
 
 /**Home component */
 function Home() {
         UsedocumentTitle("Home");
+        const postDispatch = usePostDispatch();
          const [{auth}] = useStore();
          const variables = {
           skip: 0,
@@ -24,6 +26,17 @@ function Home() {
           variables,
           fetchPolicy:"cache-first",
           });
+
+      useEffect(() => {
+
+        if (data && !loading) {
+          postDispatch({
+            type: 'ADD_POST',
+            payload: data.getPosts.posts
+          })
+        }
+      }, [data, postDispatch, loading])
+
 
 
         const skeleton = (
@@ -60,6 +73,8 @@ function Home() {
             </div>
           )
         }
+
+
 
 const { posts } = data?.getPosts;
   const main =  posts && (
