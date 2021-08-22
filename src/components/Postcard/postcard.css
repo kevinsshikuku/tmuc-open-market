@@ -1,10 +1,7 @@
 .postCard{
  display: flex;
  flex-wrap: nowrap;
- padding-top: 1rem;
  flex-direction: column;
- border-bottom: 6px solid #0000000c;
- margin-top: .3rem;
 }
 /* -------------------------------------------------------------------------- */
 
