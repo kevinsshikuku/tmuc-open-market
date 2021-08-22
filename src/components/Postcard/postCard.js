@@ -24,7 +24,7 @@ const Postcard = ({post}) => {
 
     <div className="postCard">
         <div>
-         {<div className="cardMedia">
+        { image ? <div className="cardMedia">
             {
              <div onClick={toPost} >
               <Img
@@ -36,19 +36,28 @@ const Postcard = ({post}) => {
                 }}
                 width="100%"
                 height="50%"
-                src={Netlify || image}
+                src={image}
                 alt={title}
                 debounce={1000}
               />
             </div>
              }
-        </div> }
-
-        {image && title &&
-        <div className="itemTitle">
-          {title}
-        </div>}
-
+        </div> :
+        <div onClick={toPost} >
+              <Img
+                style={{
+                  backgroundColor:"#a2a2a282",
+                  width:"100%",
+                  height:"30%",
+                  borderRadius:"15px"
+                }}
+                width="100%"
+                height="50%"
+                src={Netlify}
+                alt={title}
+                debounce={1000}
+              />
+            </div> }
         { price &&
         <>
 
