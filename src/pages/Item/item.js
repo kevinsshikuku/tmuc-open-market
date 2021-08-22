@@ -11,6 +11,7 @@ import {SkeletonPost} from "../../components/Skeleton/skeleton";
 import {Place, WhatsApp, Call} from "@material-ui/icons";
 import { usePostState } from '../../store/posts';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import {Avatar } from '@material-ui/core';
 
 
 /**single Item component */
@@ -104,7 +105,11 @@ const toProfile = () =>{
         </div>
         }
 
-         <div onClick={toProfile} className="profilebutton"> check my profile </div>
+         {/* <div onClick={toProfile} className="profilebutton"> check my profile </div> */}
+        <div className="buyer_avator"  onClick={toProfile} >
+          <Avatar name={author?.username} src={author?.image} />
+          <p> {author?.username}</p>
+        </div>
 
           <div className="createComment">
            <CreateComment postId={id} comments={comments}/>
