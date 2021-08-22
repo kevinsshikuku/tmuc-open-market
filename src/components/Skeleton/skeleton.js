@@ -9,18 +9,14 @@ export const Skeleton = () => {
   return (
     <div className="skeleton-item">
        <div className="skeleton-content">
-           <div className="skeleton-header">
-               <div className="skeleton-img"/>
-               <div className="skeleton_more">
-                   <p className="skeleton-name" />
-                   <p className="skeleton-time" />
-               </div>
-           </div>
 
-          <div className="skeleton-media">tmuc open market</div>
+          <div className="skeleton-media">
+              <p>tmuc open market</p>
+          </div>
 
            <div className="skeleton-action">
-                <p className="skeleton-button"/>
+                <p className="SkeletonBar3"/>
+                <p className="SkeletonBar4"/>
            </div>
        </div>
     </div>
