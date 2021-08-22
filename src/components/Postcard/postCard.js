@@ -63,12 +63,12 @@ const Postcard = ({post}) => {
 
         <div className="itemPrice">
           {title}
-          <div className="priceInfo">
+          <div className="priceInfo" onClick={toPost}>
             {price && <p style={{color:"blue"}} >Ksh {price}</p>}
             {crossedPrice && <p className="crossedPrice">{crossedPrice}</p>}
           </div>
         </div>
-        <div> {inStock && <p className="inStock">200 in Stock</p>}</div>
+        <div> {inStock && <p className="inStock">{inStock} in Stock</p>}</div>
         </>
         }
 
