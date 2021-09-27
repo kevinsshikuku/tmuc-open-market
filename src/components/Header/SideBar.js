@@ -18,7 +18,7 @@ export function SideBar() {
         <ul className="menu">
               <li onClick={sell}> <ShoppingBasket/> <p>Sell</p></li>
               <li onClick={buy}> <ShoppingCart/> <p>Buy</p> </li>
-              <li onClick={chat}> <Chat/> <p>Chat</p> </li>    
+              <li onClick={chat}> <Chat/> <p>Chat</p> </li>
               <li onClick={toPeople}> <People/> <p>People</p> </li>
               <li onClick={search} > <SearchTwoTone/> <p>Search</p></li>
 
@@ -27,7 +27,7 @@ export function SideBar() {
 
               <li onClick={AboutUs}> <InfoOutlined/> <p>About us</p> </li>
               <li onClick={toAppInfo}><Share/> <p>App info </p></li>
-              <div className="emptyDiv"> &copy; tmuc open market 2021 </div>
+              <div className="emptyDiv"> &copy; shoppin 2021 </div>
         </ul>
   </div>
  )

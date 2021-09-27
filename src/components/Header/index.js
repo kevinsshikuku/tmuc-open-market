@@ -19,6 +19,9 @@ function Header() {
 const header_logic = (
 <>
  <div className="loggedInHeader">
+   <div className="AppName">
+        <h1>SHOPIIN</h1>
+   </div>
     <div className="loggedInTabs">
       { path === "/" ?
       <p><span style={{color:"blue"}} className="logo"> SELLERS </span></p> :
@@ -27,7 +30,6 @@ const header_logic = (
       { path === "/buyers" ?
       <p><span className="logo" style={{color:"blue"}}> BUYERS </span></p> :
       <p  onClick={buyers}><span className="logo">BUYERS</span></p>}
-
 
     </div>
     {auth.user ? <SideBar/> : <LogeddeOutSideBar/>}

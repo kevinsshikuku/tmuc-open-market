@@ -52,7 +52,7 @@ function App() {
  const fall_back = (
     <div className="fallback">
      <div className="header"/>
-     <p>tmuc open market</p>
+     <p>SHOPIIN</p>
     </div>
  )
 

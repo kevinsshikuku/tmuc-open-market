@@ -1,6 +1,4 @@
-import gql from 'graphql-tag';
-
-
+import gql from "graphql-tag";
 
 /** Records to select from buy author */
 export const buyAuthorPayload = `
@@ -29,24 +27,26 @@ export const buyLikesPayload = `
   }
 `;
 
-
 /** Creates a buy */
-export const CREATE_BUY
-= gql`
-  mutation(
-        $title:String,
-        $description:String,
-        $pricerange:String,
-        $features: String
-        $authorId: ID!,
+export const CREATE_BUY = gql`
+  mutation (
+    $title: String
+    $description: String
+    $pricerange: String
+    $features: String
+    $authorId: ID!
   ) {
-    createBuy(title:$title, description:$description, features:$features, pricerange:$pricerange, authorId:$authorId) {
+    createBuy(
+      title: $title
+      description: $description
+      features: $features
+      pricerange: $pricerange
+      authorId: $authorId
+    ) {
       id
     }
   }
 `;
-
-
 
 /** Gets all buys from followed users */
 export const GET_FOLLOWED_BUYS = gql`
@@ -86,7 +86,6 @@ export const GET_BUYS = gql`
   }
 `;
 
-
 /**Gets all available buys */
 export const GET_PAGINATED_BUYS = gql`
   query( $after: String, $limit: Int) {
@@ -109,12 +108,8 @@ export const GET_PAGINATED_BUYS = gql`
   }
 `;
 
-
-
-
 /** Gets specific buy by id */
-export const GET_BUY
-= gql`
+export const GET_BUY = gql`
   query($id: ID!) {
     getBuy(id: $id) {
       id
@@ -129,12 +124,11 @@ export const GET_BUY
   }
 `;
 
-
 /**
  * Searches buys by title or description or price
  */
 export const SEARCH_BUYS = gql`
-  query($searchQuery: String!) {
+  query ($searchQuery: String!) {
     searchBuys(searchQuery: $searchQuery) {
       id
       title
@@ -148,12 +142,10 @@ export const SEARCH_BUYS = gql`
   }
 `;
 
-
 /** Deletes a buy */
-export const DELETE_BUY
-= gql`
-  mutation($id: ID!) {
-    deleteBuy(id: $id ) {
+export const DELETE_BUY = gql`
+  mutation ($id: ID!) {
+    deleteBuy(id: $id) {
       id
     }
   }

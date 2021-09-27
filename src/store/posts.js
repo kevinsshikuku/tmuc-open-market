@@ -47,4 +47,3 @@ export const PostProvider = ({children}) => {
 //Export what is held inside usecontext
 export const usePostState = () => useContext(PostStateContext);
 export const usePostDispatch = () => useContext(PostDispatchContext);
-

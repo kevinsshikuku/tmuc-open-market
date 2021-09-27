@@ -11,14 +11,12 @@ import Info from "./info";
 
 
 
-
-
 /**About windoshoppe */
 const AboutUs = () => {
 UsedocumentTitle("AboutUs")
   return(
       <>
-      <RouteHeader tag={"Tmuc open market"}/>
+      <RouteHeader tag={"SHOPIIN"}/>
         <Info/>
       <Footer/>
       </>

@@ -5,11 +5,18 @@
   z-index: 13;
   background-color: #deb887;
   width: 100vw;
-  height: 3rem;
+  height: 6rem;
   transform: all .3s;
   box-shadow: 0 0 5px black;
 }
 
+
+.AppName h1{
+  position: absolute;
+  font-size:2rem;
+  margin:.5rem 0 0 1rem;
+  color: red;
+}
 .loggedInHeader ul, .loggedOutHeader ul{
   margin: 0;
   padding: 0;
@@ -19,7 +26,7 @@
 
 .loggedInHeader ul li{
   display: block;
-  margin: 1rem 0 0 0;
+  margin: 3rem 0 0 0;
   cursor: pointer;
 }
 
@@ -43,7 +50,7 @@
   justify-content: center;
   font-size: small;
   font-weight: bolder;
-  margin-top: .5rem;
+  margin-top: 3rem;
   margin-left: 1rem;
   padding: 5px;
   cursor: pointer;
@@ -51,7 +58,7 @@
 
 
 .logo:hover{
-  color: white;
+  color: rgb(17, 0, 255);
 }
 
 .loggedInHeader .menu {
