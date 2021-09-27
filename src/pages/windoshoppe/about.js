@@ -16,7 +16,7 @@ const AboutUs = () => {
 UsedocumentTitle("AboutUs")
   return(
       <>
-      <RouteHeader tag={"SHOPIIN"}/>
+      <RouteHeader tag={"SHOPINN"}/>
         <Info/>
       <Footer/>
       </>

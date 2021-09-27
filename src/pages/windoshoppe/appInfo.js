@@ -53,11 +53,11 @@ function AppInfo() {
             <p className={classes.app_info_bar_p}  onClick={goBack}> <ArrowBack/> </p>
         </div>
         <div className={classes.app_Info_component}>
-            <h1>SHOPIIN</h1>
+            <h1>SHOPINN</h1>
             <p className={classes.description}>Buy and Sell Anything!</p>
             <p  className={classes.description}> at best prices</p>
             <br/> <br/>
-            <i> &copy; 2021 shopiin </i>
+            <i> &copy; 2021 SHOPINN </i>
         </div>
     </div>
     </>

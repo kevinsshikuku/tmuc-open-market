@@ -171,7 +171,7 @@ const main = (
       <div>
         <div  onClick={toAppInfo}  className={classes.signInLogo}>
           <span> <Avatar alt="logo" src={Logo} className={classes.large}/> </span>
-          <p>SHOPIIN</p>
+          <p>SHOPINN</p>
         </div>
         <form onSubmit={handleSubmit}  className={classes.signInForm} >
 

@@ -164,7 +164,7 @@ function SignUp() {
             {" "}
             <Avatar alt="logo" src={Logo} className={classes.large} />{" "}
           </span>
-          <p>SHOPPIN</p>
+          <p>SHOPINN</p>
         </div>
 
         <form onSubmit={handleSubmit} className={classes.signInForm}>

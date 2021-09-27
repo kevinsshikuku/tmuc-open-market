@@ -27,7 +27,7 @@ export function SideBar() {
 
               <li onClick={AboutUs}> <InfoOutlined/> <p>About us</p> </li>
               <li onClick={toAppInfo}><Share/> <p>App info </p></li>
-              <div className="emptyDiv"> &copy; shoppin 2021 </div>
+              <div className="emptyDiv"> &copy; SHOPINN 2021 </div>
         </ul>
   </div>
  )

@@ -20,7 +20,7 @@ const header_logic = (
 <>
  <div className="loggedInHeader">
    <div className="AppName">
-        <h1>SHOPIIN</h1>
+        <h1>SHOPINN</h1>
    </div>
     <div className="loggedInTabs">
       { path === "/" ?
