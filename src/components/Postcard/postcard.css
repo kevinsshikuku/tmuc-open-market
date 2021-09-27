@@ -1,0 +1,184 @@
+.postCard{
+ display: flex;
+ flex-wrap: nowrap;
+ flex-direction: column;
+}
+/* -------------------------------------------------------------------------- */
+
+.B{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: row;
+  margin: 0  0 0 1rem;
+}
+
+.B h4{
+  text-transform: capitalize;
+  font-size: larger;
+}
+.B p{
+  font-size: smaller;
+  font-weight:lighter;
+  padding-left: .5rem;
+}
+
+.itemTitle{
+   margin-left: 1rem;
+   color: rgb(0, 30, 255);
+}
+
+
+.cardAcations {
+ margin-left: auto;
+ padding: 0 2rem;
+
+}
+
+.crossedPrice{
+   text-decoration-line: line-through;
+   color: #ff0000;
+}
+
+.inStock{
+ float: right;
+ margin: 0 2rem .5rem 0;
+}
+
+/* -------------------------------------------------------------------------- */
+.cardMedia{
+ flex: content;
+ cursor: pointer;
+}
+
+.itemPrice,  .itemDescription, .itemFeatures, .itemFeatures ul {
+  margin: 0 0 0.5rem 1rem;
+}
+
+
+.itemPrice .priceInfo{
+  display: flex;
+}
+
+
+.itemPrice .priceInfo p{
+  margin-left: 1rem;
+}
+
+
+.itemStats{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  padding-bottom: .5rem;
+  align-items: center;
+  margin: 0 3px;
+}
+
+.moreBtn{
+  cursor: pointer;
+}
+
+.buyBtn{
+  cursor: pointer;
+  background-color: rgb(172, 172, 172);
+  border-radius: 5px;
+  padding: .2rem .6rem;
+  box-shadow: 1px 1px 4px  black;
+}
+
+.buyer_avator{
+  display: flex;
+  margin: 0 0 .2rem .5rem;
+}
+
+.buyer_avator p{
+  margin-top: auto;
+}
+
+
+
+
+
+
+
+
+/** Item buttons*/
+
+.buy_itemBtns {
+clear: both;
+display: flex;
+padding: 0 .4rem 1rem .4rem;
+margin: .5rem 0;
+align-items: center;
+justify-content: space-between;
+font-size: xx-small;
+}
+
+.buy_button, .buy_profilebutton{
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  color: blue;
+  border: 1px solid #0000ff25;
+  box-shadow: 1px 1px 4px #3e3e8c;
+  border-radius: 5px;
+  padding: .2rem .8rem;
+}
+.buy_profilebutton{
+  padding: .3rem .8rem;
+}
+
+
+.sugested_people{
+  position: absolute;
+  top:5rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------Media Queries-------------------------------------------- */
+@media(min-width:48em){
+
+.postCard{
+ margin: 2rem 0 0 0;
+ padding: 0  0 1rem 0;
+ font-size: xx-small;
+ width: 30rem;
+ flex-direction: column;
+ border-bottom: 2px solid rgb(171, 171, 172);
+ border-radius:none;
+}
+
+.cardAcations{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px;
+  padding: .5rem 0;
+}
+.itemTitle{
+   margin-left: 4rem;
+   color: rgb(0, 30, 255);
+}
+
+.cardMedia{
+ flex: content;
+ width: 30rem;
+ cursor: pointer;
+}
+
+
+
+}

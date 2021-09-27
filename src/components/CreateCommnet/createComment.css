@@ -1,0 +1,35 @@
+/* .form{
+ margin: 1rem;
+} */
+
+.input{
+  border:.5px;
+  resize: none;
+  background: #b5b5b533;
+  outline:none;
+  min-width:90vw;
+  font-size: smaller;
+  margin-right: 1rem;
+  border-radius: 5px;
+  font-family: sans-serif;
+  }
+
+ .form button{
+  margin-left: auto;
+ }
+
+ .formDescription{
+  border-top: 1px solid #80808017;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-weight: bolder;
+ }
+
+
+
+
+
+
+@media(min-width:48em){
+
+}

@@ -1,0 +1,139 @@
+.create_post_wrapper{
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.image_preview{
+  width: 98%;
+  margin: auto;
+  margin-top: 3.3rem;
+}
+
+
+.post_description{
+ display: flex;
+ flex-direction: column;
+ width: 97vw;
+ margin: auto;
+}
+
+.description, .title, .priceInput{
+ outline: none;
+ border: none;
+ resize: none;
+ flex-grow: inherit;
+ font-size: larger;
+ font-family: sans-serif;
+ width: 100%;
+ margin-top: 1rem;
+ border-bottom: 1px solid #0000ff48;
+}
+.photo_input{
+  margin-left: auto;
+}
+
+.display_item_loader{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+  height: 90vh;
+}
+
+.display_item_alert{
+  display: flex;
+  font-size: large;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+  color: rgb(4, 0, 255);
+}
+
+.display_item_error{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+  color: red;
+}
+
+.floating_button{
+  width: inherit;
+  padding-right: 1rem;
+}
+
+.close{
+ position: absolute;
+ right: 0;
+ margin-right: 2rem;
+ font-size: xx-large;
+}
+
+
+.displayBtn{
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.displayBtn button{
+  background: none;
+  padding:0.4rem 1rem;
+  border-radius: 20px;
+  border: 2px solid gray;
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width:48em){
+
+.create_post_wrapper{
+  width: 30vw;
+  padding: 0;
+  margin: 0;
+}
+
+.image_preview{
+  width: 20rem;
+  margin-top: 3.3rem;
+}
+
+.description, .title, .priceInput{
+ resize: none;
+ text-align: start;
+ flex-grow: inherit;
+ font-size: larger;
+ font-family: sans-serif;
+ width: 100%;
+ margin-top: 1rem;
+ border-bottom: 1px solid #0000ff48;
+}
+
+.post_description{
+ display: flex;
+ flex-direction: column;
+ width: 27vw;
+ margin: auto;
+}
+
+
+.displayBtn button{
+  background: none;
+  padding:0.4rem 1rem;
+  border-radius: 20px;
+  border: 2px solid gray;
+}
+
+}

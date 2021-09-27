@@ -1,0 +1,17 @@
+.notification_container{
+ display: flex;
+ width: 90vw;
+ margin: auto;
+ margin-top: 3.4rem;
+}
+
+
+.notification_container p{
+ flex: 2;
+ flex-grow: initial;
+}
+
+.notification_img{
+ flex: 1;
+ margin: 0 0 0 2rem;
+}

@@ -1,0 +1,105 @@
+.signInContainer{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 5rem 0 3rem 0;
+width: 100vw;
+}
+
+.signInForm{
+width: 80vw;
+}
+
+
+.signInInput{
+ display: block;
+ border-bottom: 2px solid rgba(38, 38, 230, 0.857);
+ margin-top: 2rem;
+ padding: 6px 0 0 0;
+ outline: none;
+ font-size: large;
+ height: 2em;
+ width: 100%;
+ color: black;
+ background-color: none;
+}
+
+.signInButton{
+ border: none;
+ background-color: rgb(155, 69, 69);
+ padding: 10px;
+ width: 7rem;
+ outline: none;
+ border-radius: 18px;
+ box-shadow: none;
+ cursor: pointer;
+ margin: 2rem 0  2rem 30% ;
+}
+
+.signInLogo{
+ display: flex;
+ align-items: center;
+ font-weight: bolder;
+ font-size: xx-large;
+ cursor: pointer;
+ justify-content: center;
+}
+.error{
+ color:red;
+ font-weight: bolder;
+ text-align: center;
+}
+
+.loader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin-top: 3rem;
+}
+
+.Link{
+  cursor: pointer;
+  color:blue;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.loader h5{
+ color:rgb(13, 255, 0);
+ font-weight: bolder;
+ text-align: center;
+ margin: 4rem 0 4rem 0;
+ animation-name: load;
+ animation-duration: 2s;
+ animation-iteration-count: infinite;
+}
+@keyframes load{
+  0%   {color:#232b23;}
+  25%  {color:#3bc434;}
+  50%  {color:#41723e;}
+  75%  {color:#3b4f3a;}
+  100% {color:#11f011;}
+}
+
+
+/* -------------------------------media queries------------------------------------------- */
+@media(min-width:48em){
+.signInForm{
+width: 40vw;
+margin: 0;
+padding: 2rem;
+}
+
+
+.signInInput{
+ display: block;
+ border: none;
+ background-color: rgb(163, 163, 163);
+ margin-top: 2rem;
+ padding: 5px;
+ height: 2rem;
+}
+
+}

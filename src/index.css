@@ -1,0 +1,52 @@
+body::-webkit-scrollbar{
+  display: none;
+  }
+
+body, html{
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer */
+   -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+code {
+  font-family: sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  padding: 0;
+  margin: 0;
+}
+
+*{
+  font-size: small;
+  /* background-color: black;
+  color: white; */
+}
+
+.fab{
+  position: fixed;
+  z-index: 14;
+  bottom: 0;
+  right: 0;
+  margin: 0 1rem  2.5rem 0;
+}
+
+
+
+
+
+@media(min-width:48em){
+  *{
+    /* opacity: -1; */
+  }
+}
